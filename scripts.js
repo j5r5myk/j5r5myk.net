@@ -24,14 +24,10 @@ var draw = function(width, height) {
 	console.log(width, height);
 	// erase lines first
 	 $(".border").hide();
-    $("#top").show();
-    $("#top").animate({width: "318px"},1000, function() {
-      $("#right").show();
-      $("#right").animate({height: "238px"},1000, function() {
-        $("#bottom").show();
-        $("#bottom").animate({width: "318px"},1000, function() {
-          $("#left").show();
-          $("#left").animate({height: "238px"},1000, function() {
+    $("#top").show().animate({width: "318px"},1000, function() {
+      $("#right").show().animate({height: "238px"},1000, function() {
+        $("#bottom").show().animate({width: "318px"},1000, function() {
+          $("#left").show().animate({height: "238px"},1000, function() {
           });
         });
       });
