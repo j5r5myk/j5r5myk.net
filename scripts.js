@@ -5,14 +5,14 @@ $(document).ready(function(){
 	width = .5* width;
 	height = .5 * height;
 	$("#dimensions").text("Your viewport is " + $(window).width() + " by " + $(window).height());
-	setPositions(width, height);
+	//setPositions(width, height);
 	draw(width, height);
 	// resizing
     $(window).resize(function() {
 		$("#dimensions").text("Your viewport is " + $(window).width() + " by " + $(window).height());
 		var width = $(window).width() - 2*parseInt($('body').css('margin-left'));
 		var height = $(window).height() - 2*parseInt($('body').css('margin-top'));
-		setPositions(width, height);
+		//setPositions(width, height);
 		draw(width, height);
 	});
 	
@@ -21,16 +21,21 @@ $(document).ready(function(){
 var draw = function(width, height) {
 	width = width+'px';
 	height = height+'px';
-	// erase lines first
-	$(".border").hide();
 	console.log(width, height);
-	$('#top').show().animate({width: width}, 1000, function() {	
-		$('#right').show().animate({height: height}, 1000, function() {
-			$('#bottom').show().animate({width: -=width}, 1000, function() {
-				$('#left').show().animate({height: -=height}, 1000);
-			});
-		});
-	});
+	// erase lines first
+	 $(".border").hide();
+    $("#top").show();
+    $("#top").animate({width: "318px"},1000, function() {
+      $("#right").show();
+      $("#right").animate({height: "238px"},1000, function() {
+        $("#bottom").show();
+        $("#bottom").animate({width: "318px"},1000, function() {
+          $("#left").show();
+          $("#left").animate({height: "238px"},1000, function() {
+          });
+        });
+      });
+    });
 }
 // set positions of line segments
 var setPositions = function(width, height) {

@@ -4,39 +4,39 @@ body {
 	border: 8px;
 }
 
-.border {
-	background: silver;
-	position: absolute;
-}
-.borderh {
-	height: 0px;
-	border: 3px solid black;
-}
-.borderv {
-	width: 0px;
-	border: 3px solid black;
-}
+.border { background: silver; position: absolute; }
+.borderh { height: 0px; border: 1px solid black; }
+.borderv { width: 0px; border: 1px solid black; }
+  
 #container {
-	border: 1px solid red;
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-#bottom {
-	border: 5px red;
+	width: 320px;
+	height: 240px;
+	position: relative;
+	margin: 0;
+	padding: 0;
 }
 
 
-#top {
-	top: 0; left: 0;
+#top {   
+	left: 0px; top: 0px;
 }
 #right {
-	top: 0; right: 0;
+	right: 0px; top: 0px;
 }
-#bottom {
-	bottom: 0; right: 0;
+#bottom {   
+	right: 0px; bottom: 0px;
 }
 #left {
-	bottom: 0; left: 0;
+	left: 0px; bottom: 0px;
 }
-
+#content {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    /* border-divs are 0px wide with 1px border all around, thus have a width & height of 2px (twice the border-width) -- 2 border-divs = 4 less pixels for the content ! */
+    width: 316px;
+    height: 236px;
+    overflow: auto;
+    text-shadow: 0 0 1px #555;
+    text-align: justify;
+}
