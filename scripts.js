@@ -37,5 +37,5 @@ var draw = function(width, height) {
 // set positions of line segments
 var setPositions = function(width, height) {
 	$('#container').css({width: width, height: height});
-	$('#content').css({width: width-12, height: height-12});
+	//$('#content').css({width: width-12, height: height-12});
 }
