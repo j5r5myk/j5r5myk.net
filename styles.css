@@ -5,8 +5,8 @@ body {
 }
 
 .border { background: silver; position: absolute; }
-.borderh { height: 0px; border: 1px solid black; }
-.borderv { width: 0px; border: 1px solid black; }
+.borderh { height: 0px; border: 3px solid black; }
+.borderv { width: 0px; border: 3px solid black; }
   
 #container {
 	width: 320px;
@@ -30,12 +30,12 @@ body {
 	left: 0px; bottom: 0px;
 }
 #content {
+	border: 1px red solid;
     position: absolute;
     top: 2px;
     left: 2px;
     /* border-divs are 0px wide with 1px border all around, thus have a width & height of 2px (twice the border-width) -- 2 border-divs = 4 less pixels for the content ! */
-    width: 316px;
-    height: 236px;
+    
     overflow: auto;
     text-shadow: 0 0 1px #555;
     text-align: justify;

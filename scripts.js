@@ -23,13 +23,13 @@ var draw = function(width, height) {
 	console.log(width, height);
 	// erase lines first
 	$(".border").hide();
-    $("#top").show().animate({width: width-2},1000, function() {
+    $("#top").show().animate({width: width-6},1000, function() {
 		$('#right').show();
-		$('#right').animate({height: height-2},1000, function() {
+		$('#right').animate({height: height-6},1000, function() {
 			$('#bottom').show();
-			$('#bottom').animate({width: width-2},1000, function() {
+			$('#bottom').animate({width: width-6},1000, function() {
 				$('#left').show();
-				$('#left').animate({height: height-2},1000);
+				$('#left').animate({height: height-6},1000);
 			});
 		});
     });
@@ -37,5 +37,5 @@ var draw = function(width, height) {
 // set positions of line segments
 var setPositions = function(width, height) {
 	$('#container').css({width: width, height: height});
-	$('#content').css({width: width-4, height: height-4});
+	$('#content').css({width: width-12, height: height-12});
 }
