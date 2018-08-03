@@ -5,14 +5,14 @@ $(document).ready(function(){
 	width = width;
 	height = height;
 	$("#dimensions").text("Your viewport is " + $(window).width() + " by " + $(window).height());
-	setPositions(width, height);
+	setContainer(width, height);
 	draw(width, height);
 	// resizing
     $(window).resize(function() {
 		$("#dimensions").text("Your viewport is " + $(window).width() + " by " + $(window).height());
 		var width = $(window).width() - 2*parseInt($('body').css('margin-left'));
 		var height = $(window).height() - 2*parseInt($('body').css('margin-top'));
-		setPositions(width, height);
+		setContainer(width, height);
 		draw(width, height);
 	});
 });
@@ -34,8 +34,7 @@ var draw = function(width, height) {
 		});
     });
 }
-// set positions of line segments
-var setPositions = function(width, height) {
+// set line container size
+var setContainer = function(width, height) {
 	$('#container').css({width: width, height: height});
-	//$('#content').css({width: width-12, height: height-12});
 }
